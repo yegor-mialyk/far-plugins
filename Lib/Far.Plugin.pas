@@ -4,7 +4,7 @@
 {                                                             }
 { Copyright (C) 1996-2000, Eugene Roshal                      }
 { Copyright (C) 2000-2018, Far Group                          }
-{ Copyright (C) 1995-2018, Yegor Myalik. All Rights Reserved. }
+{ Copyright (C) 1995-2018, Yegor Mialyk. All Rights Reserved. }
 {                                                             }
 {*************************************************************}
 
@@ -50,6 +50,28 @@ type
 {$INCLUDE Far.Plugin.DlgGuid.Generated.pas}
 {$INCLUDE Far.Plugin.Helpers.Generated.pas}
 {$INCLUDE Far.Plugin.Settings.pas}
+
+type    
+  PluginPanelItemEx = record
+    CreationTime: FILETIME;
+    LastAccessTime: FILETIME;
+    LastWriteTime: FILETIME;
+    ChangeTime: FILETIME;
+    FileSize: UInt64;
+    AllocationSize: UInt64;
+    FileName: string;
+    AlternateFileName: string;
+    Description: string;
+    Owner: string;
+    CustomColumnData: PPChar;
+    CustomColumnNumber: UIntPtr;
+    Flags: PLUGINPANELITEMFLAGS;
+    UserData: UserDataItem;
+    FileAttributes: UIntPtr;
+    NumberOfLinks: UIntPtr;
+    CRC32: UIntPtr;
+    Reserved: array [0..1] of IntPtr;
+  end;
 
 function MakeFarVersion(const Major, Minor, Build, Revision: DWORD; const Stage: VERSION_STAGE = VS_RELEASE): VersionInfo;
 procedure InitStartupInfo(const StartupInfo: PluginStartupInfo);

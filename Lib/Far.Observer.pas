@@ -3,7 +3,7 @@
 { Delphi Runtime Library                                      }
 {                                                             }
 { Copyright (C) 2009-2018, Ariman                             }
-{ Copyright (C) 1995-2018, Yegor Myalik. All Rights Reserved. }
+{ Copyright (C) 1995-2018, Yegor Mialyk. All Rights Reserved. }
 {                                                             }
 {*************************************************************}
 

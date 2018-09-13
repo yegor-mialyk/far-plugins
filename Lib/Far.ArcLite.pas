@@ -3,7 +3,7 @@
 { Delphi Runtime Library                                      }
 {                                                             }
 { Copyright (C) 1999-2018, Igor Pavlov.                       }
-{ Copyright (C) 1995-2018, Yegor Myalik. All Rights Reserved. }
+{ Copyright (C) 1995-2018, Yegor Mialyk. All Rights Reserved. }
 {                                                             }
 {*************************************************************}
 
@@ -171,9 +171,9 @@ type
     function GetSize(out size: UInt64): HRESULT; stdcall;
   end;
 
-  IOutStreamFlush = interface(IUnknown)
+  IOutStreamFinish = interface(IUnknown)
     ['{23170F69-40C1-278A-0000-000300070000}']
-    function Flush: HRESULT; stdcall;
+    function OutStreamFinish: HRESULT; stdcall;
   end;
 
 type
@@ -192,9 +192,9 @@ type
 
   IArchiveExtractCallback = interface(IProgress)
     ['{23170F69-40C1-278A-0000-000600200000}']
-    function GetStream(index: UInt32; out OutStream: ISequentialOutStream; askExtractMode: Integer): HRESULT; stdcall;
+    function GetStream(index: UInt32; out outStream: ISequentialOutStream; askExtractMode: Integer): HRESULT; stdcall;
     function PrepareOperation(askExtractMode: Integer): HRESULT; stdcall;
-    function SetOperationResult(resultEOperationResult: Integer): HRESULT; stdcall;
+    function SetOperationResult(opRes: Integer): HRESULT; stdcall;
   end;
 
   IArchiveOpenVolumeCallback = interface(IUnknown)

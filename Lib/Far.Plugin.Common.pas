@@ -1,3 +1,13 @@
+{*************************************************************}
+{                                                             }
+{ Delphi Runtime Library                                      }
+{                                                             }
+{ Copyright (C) 1996-2000, Eugene Roshal                      }
+{ Copyright (C) 2000-2018, Far Group                          }
+{ Copyright (C) 1995-2018, Yegor Mialyk. All Rights Reserved. }
+{                                                             }
+{*************************************************************}
+
 function GetMsg(const MsgId: TFarMessage): PChar;
 begin
   Result := FarAPI.GetMsg(PluginGuid, Integer(MsgId));
