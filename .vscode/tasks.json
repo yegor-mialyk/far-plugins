@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Far Manager library",
+            "command": "dcc32.exe",
+            "type": "process",
+            "args": [
+                "Lib\\Far.Plugin.pas",
+                "Lib\\Far.ArcLite.pas",
+                "Lib\\Far.Observer.pas",
+                "-q"
+            ],
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "^(.*)\\((\\d+)\\)\\s(Fatal|Error|Warning|Hint):(.*)",
+                    "file": 1,
+                    "line": 2,
+                    "severity": 3,
+                    "message": 4
+                }
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
