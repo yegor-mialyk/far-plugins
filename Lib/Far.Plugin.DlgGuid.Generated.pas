@@ -270,3 +270,6 @@ const
 
 const
   PluginInformationId: TGUID = '{FC4FD19A-43D2-4987-AC31-0F7A94901692}';
+
+const
+  ViewerSearchId: TGUID = '{03B6C098-A3D6-4DFB-AED4-EB32D711D9AA}';
