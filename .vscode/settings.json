@@ -7,11 +7,16 @@
         "**/*.dcu": true
     },
 
+    "files.associations": {
+        "*.pp": "pascal"
+    },
+
     "spellright.documentTypes": [
         "markdown",
         "latex",
         "plaintext"
     ],
+
     "spellright.language": [
         "en"
     ]

@@ -3,8 +3,10 @@
 { Delphi Runtime Library                                      }
 {                                                             }
 { Copyright (C) 1996-2000, Eugene Roshal                      }
-{ Copyright (C) 2000-2018, Far Group                          }
-{ Copyright (C) 1995-2018, Yegor Mialyk. All Rights Reserved. }
+{ Copyright (C) 2000-2019, Far Group                          }
+{ Copyright (C) 1995-2019, Yegor Mialyk. All Rights Reserved. }
+{                                                             }
+{ Licensed under the MIT License. See LICENSE for details.    }
 {                                                             }
 {*************************************************************}
 
@@ -19,8 +21,8 @@ type
     procedure OpenRoot; inline;
     function CreateKey(const Name: string): UIntPtr;
     function OpenKey(const Name: string): UIntPtr;
-    function GetValue(const Name, DefaultValue: string): PChar; overload;
-    function GetValue(const Name: string; const DefaultValue: UInt64): UInt64; overload;
+    function GetValue(const Name: string; const DefaultValue: string = ''): PChar; overload;
+    function GetValue(const Name: string; const DefaultValue: UInt64 = 0): UInt64; overload;
     function SetValue(const Name, Value: string): Boolean; overload;
     function SetValue(const Name: string; const Value: UInt64): Boolean; overload;
   end;

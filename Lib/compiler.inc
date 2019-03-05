@@ -2,7 +2,9 @@
 {                                                             }
 { Delphi Generic Compiler Directives                          }
 {                                                             }
-{ Copyright (C) 1995-2018, Yegor Myalik. All Rights Reserved. }
+{ Copyright (C) 1995-2019, Yegor Myalik. All Rights Reserved. }
+{                                                             }
+{ Licensed under the MIT License. See LICENSE for details.    }
 {                                                             }
 {*************************************************************}
 

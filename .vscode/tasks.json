@@ -7,7 +7,6 @@
             "type": "process",
             "args": [
                 "Lib\\Far.Plugin.pas",
-                "Lib\\Far.ArcLite.pas",
                 "Lib\\Far.Observer.pas",
                 "-q"
             ],
