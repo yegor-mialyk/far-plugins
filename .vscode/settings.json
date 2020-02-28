@@ -19,12 +19,5 @@
 
     "spellright.language": [
         "en"
-    ],
-
-    "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#104070",
-      "titleBar.inactiveBackground": "#10407099",
-      "titleBar.activeForeground": "#e0e0e0",
-      "titleBar.inactiveForeground": "#e0e0e099"
-    }
+    ]
 }
