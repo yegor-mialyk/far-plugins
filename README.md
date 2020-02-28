@@ -9,6 +9,6 @@ File an issue or request a new feature in [GitHub Issues](https://github.com/yeg
 
 ## License
 
-Copyright (C) 1995-2019 Yegor Mialyk. All Rights Reserved.
+Copyright (C) 1995-2020 Yegor Mialyk. All Rights Reserved.
 
 Licensed under the [MIT](LICENSE) License.
