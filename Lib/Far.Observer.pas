@@ -2,8 +2,8 @@
 {                                                             }
 { Delphi Runtime Library                                      }
 {                                                             }
-{ Copyright (C) 2009-2019, Ariman                             }
-{ Copyright (C) 1995-2019, Yegor Mialyk. All Rights Reserved. }
+{ Copyright (C) 2009-2020, Ariman                             }
+{ Copyright (C) 1995-2020, Yegor Mialyk. All Rights Reserved. }
 {                                                             }
 { Licensed under the MIT License. See LICENSE for details.    }
 {                                                             }
