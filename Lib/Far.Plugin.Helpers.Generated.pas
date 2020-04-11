@@ -11,6 +11,8 @@
 {     the code is regenerated.                                              }
 { </auto-generated>                                                         }
 {                                                                           }
+{ Licensed under the MIT License. See LICENSE for details.                  }
+{                                                                           }
 {***************************************************************************}
 
 {$IFNDEF _FAR_IMPLEMENTATION_}
