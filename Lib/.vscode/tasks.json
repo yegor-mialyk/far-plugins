@@ -6,8 +6,8 @@
             "command": "dcc32.exe",
             "type": "process",
             "args": [
-                "Lib\\Far.Plugin.pas",
-                "Lib\\Far.Observer.pas",
+                "Far.Plugin.pas",
+                "Far.Observer.pas",
                 "-q"
             ],
             "problemMatcher": {
