@@ -75,7 +75,7 @@ type
     Reserved: array [0..1] of IntPtr;
   end;
 
-function MakeFarVersion(const Major, Minor, Build, Revision: DWORD; const Stage: VERSION_STAGE = VS_RELEASE): VersionInfo;
+function MakeFarVersion(const Major, Minor, Revision, Build: DWORD; const Stage: VERSION_STAGE = VS_RELEASE): VersionInfo;
 procedure InitStartupInfo(const StartupInfo: PluginStartupInfo);
 
 var
@@ -88,8 +88,8 @@ function MakeFarVersion;
 begin
   Result.Major := Major;
   Result.Minor := Minor;
-  Result.Build := Build;
   Result.Revision := Revision;
+  Result.Build := Build;
   Result.Stage := Stage;
 end;
 

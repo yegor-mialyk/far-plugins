@@ -10,14 +10,16 @@
 
 function GetMsg(const MsgId: TFarMessage): PChar;
 begin
-  Result := FarAPI.GetMsg(PluginGuid, Integer(MsgId));
+  Result := FarAPI.GetMsg(PluginGuid, IntPtr(MsgId));
 end;
 
-function ShowMessage(const Message: PChar): Integer;
+function ShowMessage(const Message: PChar;
+  Flags: FARMESSAGEFLAGS = FMSG_WARNING or FMSG_MB_OK;
+  HelpTopic: PChar = NULL): Integer;
 var
-  MessArr: array [0..1] of PChar;
+  Items: array [0..1] of PChar;
 begin
-  MessArr[0] := GetMsg(MPluginName);
-  MessArr[1] := Message;
-  Result := FarAPI.Message(PluginGuid, PluginGuid, FMSG_WARNING or FMSG_MB_OK, NULL, @MessArr, High(MessArr) + 1, 0);
+  Items[0] := GetMsg(MPluginName);
+  Items[1] := Message;
+  Result := FarAPI.Message(PluginGuid, PluginGuid, Flags, HelpTopic, @Items, High(Items) + 1, 0);
 end;
