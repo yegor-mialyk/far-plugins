@@ -5,7 +5,7 @@
     "commands": [
         {
             "text": "$(zap) Build",
-            "tooltip": "Build Far Manager library",
+            "tooltip": "Build",
             "color": "yellow",
             "commandType": "palette",
             "command": "workbench.action.tasks.build",

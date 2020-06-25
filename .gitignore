@@ -1,1 +1,8 @@
 *.dcu
+*.res
+*.dll
+*.exe
+
+bin
+
+!Tools/*.exe

@@ -1,4 +1,4 @@
-<%GenerateHelper
+%MACRO GenerateHelper
 {$IFNDEF _FAR_IMPLEMENTATION_}
 type
   %1Helper = record helper for %1
@@ -12,100 +12,100 @@ begin
 end;
 {$ENDIF}
 
-%>
-%GenerateHelper FarListUpdate
-%GenerateHelper FarListInsert
-%GenerateHelper FarListGetItem
-%GenerateHelper FarListPos
-%GenerateHelper FarListFind
-%GenerateHelper FarListDelete
-%GenerateHelper FarListInfo
-%GenerateHelper FarListItemData
-%GenerateHelper FarList
-%GenerateHelper FarListTitles
-%GenerateHelper FarDialogItemColors
-%GenerateHelper FarDialogItemData
-%GenerateHelper FarDialogEvent
-%GenerateHelper OpenDlgPluginData
-%GenerateHelper DialogInfo
-%GenerateHelper FarGetDialogItem
-%GenerateHelper FarPanelItemFreeInfo
-%GenerateHelper FarGetPluginPanelItem
-%GenerateHelper PanelInfo
-%GenerateHelper PanelRedrawInfo
-%GenerateHelper CmdLineSelect
-%GenerateHelper FarPanelDirectory
-%GenerateHelper MacroParseResult
-%GenerateHelper MacroSendMacroText
-%GenerateHelper MacroAddMacro
-%GenerateHelper FarMacroCall
-%GenerateHelper FarGetValue
-%GenerateHelper MacroExecuteString
-%GenerateHelper FarMacroLoad
-%GenerateHelper FarSetColors
-%GenerateHelper WindowInfo
-%GenerateHelper WindowType
-%GenerateHelper ProgressValue
-%GenerateHelper ViewerSetMode
-%GenerateHelper ViewerSelect
-%GenerateHelper ViewerSetPosition
-%GenerateHelper ViewerInfo
-%GenerateHelper EditorSetParameter
-%GenerateHelper EditorUndoRedo
-%GenerateHelper EditorGetString
-%GenerateHelper EditorSetString
-%GenerateHelper EditorInfo
-%GenerateHelper EditorBookmarks
-%GenerateHelper EditorSetPosition
-%GenerateHelper EditorSelect
-%GenerateHelper EditorConvertPos
-%GenerateHelper EditorColor
-%GenerateHelper EditorDeleteColor
-%GenerateHelper EditorSaveFile
-%GenerateHelper EditorChange
-%GenerateHelper EditorSubscribeChangeEvent
-%GenerateHelper FarSettingsCreate
-%GenerateHelper FarSettingsItem
-%GenerateHelper FarSettingsEnum
-%GenerateHelper FarSettingsValue
-%GenerateHelper FarStandardFunctions
-%GenerateHelper PluginStartupInfo
-%GenerateHelper ArclitePrivateInfo
-%GenerateHelper NetBoxPrivateInfo
-%GenerateHelper MacroPrivateInfo
-%GenerateHelper GlobalInfo
-%GenerateHelper PluginInfo
-%GenerateHelper FarGetPluginInformation
-%GenerateHelper FarSetKeyBarTitles
-%GenerateHelper OpenPanelInfo
-%GenerateHelper AnalyseInfo
-%GenerateHelper OpenAnalyseInfo
-%GenerateHelper OpenMacroInfo
-%GenerateHelper OpenShortcutInfo
-%GenerateHelper OpenCommandLineInfo
-%GenerateHelper OpenInfo
-%GenerateHelper SetDirectoryInfo
-%GenerateHelper SetFindListInfo
-%GenerateHelper PutFilesInfo
-%GenerateHelper ProcessHostFileInfo
-%GenerateHelper MakeDirectoryInfo
-%GenerateHelper CompareInfo
-%GenerateHelper GetFindDataInfo
-%GenerateHelper FreeFindDataInfo
-%GenerateHelper GetFilesInfo
-%GenerateHelper DeleteFilesInfo
-%GenerateHelper ProcessPanelInputInfo
-%GenerateHelper ProcessEditorInputInfo
-%GenerateHelper ProcessConsoleInputInfo
-%GenerateHelper ExitInfo
-%GenerateHelper ProcessPanelEventInfo
-%GenerateHelper ProcessEditorEventInfo
-%GenerateHelper ProcessDialogEventInfo
-%GenerateHelper ProcessSynchroEventInfo
-%GenerateHelper ProcessViewerEventInfo
-%GenerateHelper ClosePanelInfo
-%GenerateHelper CloseAnalyseInfo
-%GenerateHelper ConfigureInfo
-%GenerateHelper GetContentFieldsInfo
-%GenerateHelper GetContentDataInfo
-%GenerateHelper ErrorInfo
+%END
+%RUN GenerateHelper FarListUpdate
+%RUN GenerateHelper FarListInsert
+%RUN GenerateHelper FarListGetItem
+%RUN GenerateHelper FarListPos
+%RUN GenerateHelper FarListFind
+%RUN GenerateHelper FarListDelete
+%RUN GenerateHelper FarListInfo
+%RUN GenerateHelper FarListItemData
+%RUN GenerateHelper FarList
+%RUN GenerateHelper FarListTitles
+%RUN GenerateHelper FarDialogItemColors
+%RUN GenerateHelper FarDialogItemData
+%RUN GenerateHelper FarDialogEvent
+%RUN GenerateHelper OpenDlgPluginData
+%RUN GenerateHelper DialogInfo
+%RUN GenerateHelper FarGetDialogItem
+%RUN GenerateHelper FarPanelItemFreeInfo
+%RUN GenerateHelper FarGetPluginPanelItem
+%RUN GenerateHelper PanelInfo
+%RUN GenerateHelper PanelRedrawInfo
+%RUN GenerateHelper CmdLineSelect
+%RUN GenerateHelper FarPanelDirectory
+%RUN GenerateHelper MacroParseResult
+%RUN GenerateHelper MacroSendMacroText
+%RUN GenerateHelper MacroAddMacro
+%RUN GenerateHelper FarMacroCall
+%RUN GenerateHelper FarGetValue
+%RUN GenerateHelper MacroExecuteString
+%RUN GenerateHelper FarMacroLoad
+%RUN GenerateHelper FarSetColors
+%RUN GenerateHelper WindowInfo
+%RUN GenerateHelper WindowType
+%RUN GenerateHelper ProgressValue
+%RUN GenerateHelper ViewerSetMode
+%RUN GenerateHelper ViewerSelect
+%RUN GenerateHelper ViewerSetPosition
+%RUN GenerateHelper ViewerInfo
+%RUN GenerateHelper EditorSetParameter
+%RUN GenerateHelper EditorUndoRedo
+%RUN GenerateHelper EditorGetString
+%RUN GenerateHelper EditorSetString
+%RUN GenerateHelper EditorInfo
+%RUN GenerateHelper EditorBookmarks
+%RUN GenerateHelper EditorSetPosition
+%RUN GenerateHelper EditorSelect
+%RUN GenerateHelper EditorConvertPos
+%RUN GenerateHelper EditorColor
+%RUN GenerateHelper EditorDeleteColor
+%RUN GenerateHelper EditorSaveFile
+%RUN GenerateHelper EditorChange
+%RUN GenerateHelper EditorSubscribeChangeEvent
+%RUN GenerateHelper FarSettingsCreate
+%RUN GenerateHelper FarSettingsItem
+%RUN GenerateHelper FarSettingsEnum
+%RUN GenerateHelper FarSettingsValue
+%RUN GenerateHelper FarStandardFunctions
+%RUN GenerateHelper PluginStartupInfo
+%RUN GenerateHelper ArclitePrivateInfo
+%RUN GenerateHelper NetBoxPrivateInfo
+%RUN GenerateHelper MacroPrivateInfo
+%RUN GenerateHelper GlobalInfo
+%RUN GenerateHelper PluginInfo
+%RUN GenerateHelper FarGetPluginInformation
+%RUN GenerateHelper FarSetKeyBarTitles
+%RUN GenerateHelper OpenPanelInfo
+%RUN GenerateHelper AnalyseInfo
+%RUN GenerateHelper OpenAnalyseInfo
+%RUN GenerateHelper OpenMacroInfo
+%RUN GenerateHelper OpenShortcutInfo
+%RUN GenerateHelper OpenCommandLineInfo
+%RUN GenerateHelper OpenInfo
+%RUN GenerateHelper SetDirectoryInfo
+%RUN GenerateHelper SetFindListInfo
+%RUN GenerateHelper PutFilesInfo
+%RUN GenerateHelper ProcessHostFileInfo
+%RUN GenerateHelper MakeDirectoryInfo
+%RUN GenerateHelper CompareInfo
+%RUN GenerateHelper GetFindDataInfo
+%RUN GenerateHelper FreeFindDataInfo
+%RUN GenerateHelper GetFilesInfo
+%RUN GenerateHelper DeleteFilesInfo
+%RUN GenerateHelper ProcessPanelInputInfo
+%RUN GenerateHelper ProcessEditorInputInfo
+%RUN GenerateHelper ProcessConsoleInputInfo
+%RUN GenerateHelper ExitInfo
+%RUN GenerateHelper ProcessPanelEventInfo
+%RUN GenerateHelper ProcessEditorEventInfo
+%RUN GenerateHelper ProcessDialogEventInfo
+%RUN GenerateHelper ProcessSynchroEventInfo
+%RUN GenerateHelper ProcessViewerEventInfo
+%RUN GenerateHelper ClosePanelInfo
+%RUN GenerateHelper CloseAnalyseInfo
+%RUN GenerateHelper ConfigureInfo
+%RUN GenerateHelper GetContentFieldsInfo
+%RUN GenerateHelper GetContentDataInfo
+%RUN GenerateHelper ErrorInfo

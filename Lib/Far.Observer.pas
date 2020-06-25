@@ -22,7 +22,7 @@ uses
 
 {$RTTI EXPLICIT METHODS([]) FIELDS([]) PROPERTIES([])}
 
-{$INCLUDE Far.Observer.ModuleDef.Generated.pas}
+{$INCLUDE Far.Observer.ModuleDef.g.pas}
 
 function MakeModuleVersion(const Major, Minor: DWORD): DWORD;
 

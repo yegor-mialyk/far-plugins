@@ -1,0 +1,29 @@
+{
+    "files.exclude": {
+        "**/*.dcu": true,
+        "**/*.exe": true,
+        "**/*.dll": true,
+        "**/*.RES": true,
+        "**/bin": true
+    },
+
+    "search.exclude": {
+        "**/*.dcu": true,
+        "**/*.exe": true,
+        "**/*.dll": true,
+        "**/*.RES": true,
+        "**/*.lng": true,
+        "**/bin": true
+    },
+
+    "spellright.documentTypes": [
+        "markdown",
+        "plaintext",
+        "pascal"
+    ],
+
+    "spellright.language": [
+        "en",
+        "ru"
+    ]
+}
