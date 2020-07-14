@@ -1,3 +1,12 @@
+//
+// Far Manager SDK
+//
+// Copyright (C) 1995-2020, Yegor Mialyk. All Rights Reserved.
+//
+// Licensed under the MIT License. See the LICENSE file for details.
+//
+
+%PP_HEADER
 %MACRO GenerateHelper
 {$IFNDEF _FAR_IMPLEMENTATION_}
 type
