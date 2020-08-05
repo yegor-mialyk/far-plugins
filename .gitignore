@@ -2,6 +2,7 @@
 *.res
 *.dll
 *.exe
+*.log
 
 bin
 
