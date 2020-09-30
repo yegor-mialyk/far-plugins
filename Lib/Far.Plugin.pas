@@ -41,11 +41,11 @@ type
     fcmp: TFarStdQSortFunc;
     userparam: Pointer); stdcall;
 
-{$INCLUDE Far.Plugin.Farcolor.g.pas}
+{$INCLUDE Far.Plugin.FarColor.g.pas}
 {$INCLUDE Far.Plugin.Plugin.g.pas}
-{$INCLUDE Far.Plugin.FarGuid.g.pas}
-{$INCLUDE Far.Plugin.KnownGuids.g.pas}
-{$INCLUDE Far.Plugin.DlgGuid.g.pas}
+{$INCLUDE Far.Plugin.Guids.Far.g.pas}
+{$INCLUDE Far.Plugin.Guids.Dialogs.g.pas}
+{$INCLUDE Far.Plugin.Guids.Plugins.g.pas}
 {$INCLUDE Far.Plugin.Helpers.g.pas}
 {$INCLUDE Far.Plugin.Settings.pas}
 
