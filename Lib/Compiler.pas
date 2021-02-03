@@ -1,7 +1,7 @@
 //
 // Far Manager SDK
 //
-// Copyright (C) 1995-2020, Yegor Mialyk. All Rights Reserved.
+// Copyright (C) 1995-2021, Yegor Mialyk. All Rights Reserved.
 //
 // Licensed under the MIT License. See the LICENSE file for details.
 //
