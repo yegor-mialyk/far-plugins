@@ -10,11 +10,13 @@
     Flags: FARCOLORFLAGS;
     Foreground: record case Integer of
       0: (ForegroundColor: COLORREF);
-      1: (ForegroundRGBA: rgba);
+      1: (ForegroundIndex: color_index);
+      2: (ForegroundRGBA: rgba);
     end;
     Background: record case Integer of
       0: (BackgroundColor: COLORREF);
-      1: (BackgroundRGBA: rgba);
+      1: (BackgroundIndex: color_index);
+      2: (BackgroundRGBA: rgba);
     end;
     Reserved: array [0..1] of DWORD;
   end;

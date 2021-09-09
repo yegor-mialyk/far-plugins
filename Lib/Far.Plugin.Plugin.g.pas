@@ -14,7 +14,12 @@ const
   FARMANAGERVERSION_MAJOR = 3;
   FARMANAGERVERSION_MINOR = 0;
   FARMANAGERVERSION_REVISION = 0;
-  FARMANAGERVERSION_BUILD = 5838;
+  FARMANAGERVERSION_BUILD = 5886;
+
+type
+  UUID = TGUID;
+
+const
   CP_UNICODE = UIntPtr(1200);
   CP_REVERSEBOM = UIntPtr(1201);
   CP_DEFAULT = UIntPtr(-1);
@@ -46,6 +51,15 @@ type
     r: Byte;
     g: Byte;
     b: Byte;
+    a: Byte;
+  end;
+
+type
+  Pcolor_index = ^color_index;
+  color_index = record
+    i: Byte;
+    reserved0: Byte;
+    reserved1: Byte;
     a: Byte;
   end;
 
