@@ -1,2 +1,13 @@
 {
+    "commands.workspaceCommands": {
+        "⚡Build Far Manager Plugin Libraries": {
+            "command": "workbench.action.tasks.build",
+            "statusBar": {
+                "alignment": "left",
+                "text": "⚡Build Far Libraries",
+                "color": "yellow"
+            }
+        }
+    },
+    "dotnet.defaultSolution": "Hlf2Md\\Hlf2Md.sln"
 }

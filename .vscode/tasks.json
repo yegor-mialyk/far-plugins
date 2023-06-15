@@ -21,6 +21,10 @@
       },
       "presentation": {
         "reveal": "silent"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
       }
     },
     {
@@ -47,8 +51,7 @@
         "reveal": "silent"
       },
       "group": {
-        "kind": "build",
-        "isDefault": true
+        "kind": "build"
       }
     }
   ]
