@@ -18,5 +18,9 @@
       1: (BackgroundIndex: color_index);
       2: (BackgroundRGBA: rgba);
     end;
-    Reserved: array [0..1] of DWORD;
+    Underline: record case Integer of
+      0: (UnderlineColor: COLORREF);
+      1: (UnderlineIndex: color_index);
+      2: (UnderlineRGBA: rgba);
+    end;
   end;
