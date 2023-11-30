@@ -14,7 +14,7 @@ const
   FARMANAGERVERSION_MAJOR = 3;
   FARMANAGERVERSION_MINOR = 0;
   FARMANAGERVERSION_REVISION = 0;
-  FARMANAGERVERSION_BUILD = 6218;
+  FARMANAGERVERSION_BUILD = 6221;
 
 type
   UUID = TGUID;
@@ -473,6 +473,8 @@ type
   PFAR_CHAR_INFO = ^FAR_CHAR_INFO;
   FAR_CHAR_INFO = record
     Char: Char;
+    Reserved0: Char;
+    Reserved1: Integer;
     Attributes: FarColor;
   end;
 
