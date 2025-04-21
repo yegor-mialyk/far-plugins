@@ -14,7 +14,7 @@ const
   FARMANAGERVERSION_MAJOR = 3;
   FARMANAGERVERSION_MINOR = 0;
   FARMANAGERVERSION_REVISION = 0;
-  FARMANAGERVERSION_BUILD = 6454;
+  FARMANAGERVERSION_BUILD = 6462;
 
 type
   UUID = TGUID;
@@ -1892,6 +1892,7 @@ const
   RECTL_SEARCHEX = 5;
   RECTL_BRACKETSCOUNT = 6;
   RECTL_NAMEDGROUPINDEX = 7;
+  RECTL_GETNAMEDGROUPS = 8;
 
 type
   PRegExpMatch = ^RegExpMatch;
@@ -1909,6 +1910,13 @@ type
     Match: PRegExpMatch;
     Count: IntPtr;
     Reserved: Pointer;
+  end;
+
+type
+  PRegExpNamedGroup = ^RegExpNamedGroup;
+  RegExpNamedGroup = record
+    Index: UIntPtr;
+    Name: PChar;
   end;
 
 type
