@@ -9,7 +9,6 @@
 unit Far.Plugin;
 
 {$INCLUDE Compiler.pas}
-{$WEAKPACKAGEUNIT}
 
 interface
 
