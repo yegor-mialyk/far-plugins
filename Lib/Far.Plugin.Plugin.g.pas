@@ -14,7 +14,7 @@ const
   FARMANAGERVERSION_MAJOR = 3;
   FARMANAGERVERSION_MINOR = 0;
   FARMANAGERVERSION_REVISION = 0;
-  FARMANAGERVERSION_BUILD = 6571;
+  FARMANAGERVERSION_BUILD = 6585;
 
 type
   UUID = TGUID;
@@ -1231,6 +1231,12 @@ const
   FMVT_NEWTABLE = 12;
   FMVT_SETTABLE = 13;
   FMVT_DIALOG = 14;
+  FMVT_TABLE = 15;
+  FMVT_GETTABLE = 16;
+  FMVT_STACKPOP = 17;
+  FMVT_STACKGETTOP = 18;
+  FMVT_STACKSETTOP = 19;
+  FMVT_STACKPUSHVALUE = 20;
 
 type
   PFarMacroValue = ^FarMacroValue;
@@ -1897,6 +1903,7 @@ const
   RECTL_BRACKETSCOUNT = 6;
   RECTL_NAMEDGROUPINDEX = 7;
   RECTL_GETNAMEDGROUPS = 8;
+  RECTL_GETSTATUS = 9;
 
 type
   PRegExpMatch = ^RegExpMatch;
@@ -1921,6 +1928,15 @@ type
   RegExpNamedGroup = record
     Index: UIntPtr;
     Name: PChar;
+  end;
+
+type
+  PRegExpStatus = ^RegExpStatus;
+  RegExpStatus = record
+    StructSize: UIntPtr;
+    Error: PChar;
+    Position: IntPtr;
+    Status: Integer;
   end;
 
 type

@@ -47,7 +47,6 @@ end;
 %RUN GenerateHelper MacroParseResult
 %RUN GenerateHelper MacroSendMacroText
 %RUN GenerateHelper MacroAddMacro
-%RUN GenerateHelper FarMacroCall
 %RUN GenerateHelper FarGetValue
 %RUN GenerateHelper MacroExecuteString
 %RUN GenerateHelper FarMacroLoad
@@ -73,10 +72,11 @@ end;
 %RUN GenerateHelper EditorSaveFile
 %RUN GenerateHelper EditorChange
 %RUN GenerateHelper EditorSubscribeChangeEvent
+%RUN GenerateHelper RegExpStatus
 %RUN GenerateHelper FarSettingsCreate
-%RUN GenerateHelper FarSettingsItem
 %RUN GenerateHelper FarSettingsEnum
 %RUN GenerateHelper FarSettingsValue
+%RUN GenerateHelper DetectCodePageInfo
 %RUN GenerateHelper FarStandardFunctions
 %RUN GenerateHelper PluginStartupInfo
 %RUN GenerateHelper ArclitePrivateInfo
@@ -118,3 +118,5 @@ end;
 %RUN GenerateHelper GetContentFieldsInfo
 %RUN GenerateHelper GetContentDataInfo
 %RUN GenerateHelper ErrorInfo
+%RUN GenerateHelper FarMacroCall
+%RUN GenerateHelper FarSettingsItem
