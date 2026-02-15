@@ -12,6 +12,7 @@ type
     Handle: THandle;
     CurrentRoot: UIntPtr;
 
+    function IsOpen: Boolean; inline;
     procedure Init(const Guid: TGUID; const RootValue: UIntPtr = 0);
     procedure Done;
     procedure OpenRoot; inline;
@@ -25,15 +26,24 @@ type
 
 {$ELSE}
 
+function TFarSettings.IsOpen: Boolean;
+begin
+  Result := Handle <> INVALID_HANDLE_VALUE;
+end;
+
 procedure TFarSettings.Init;
 var
   settings: FarSettingsCreate;
 begin
+  if IsOpen then
+    Done;
+
   Handle := INVALID_HANDLE_VALUE;
   CurrentRoot := RootValue;
 
   settings.Init;
   settings.Guid := Guid;
+
   if FarAPI.SettingsControl(INVALID_HANDLE_VALUE, SCTL_CREATE, 0, Pointer(@settings)) <> 0 then
     Handle := settings.Handle;
 end;
@@ -45,43 +55,61 @@ end;
 
 procedure TFarSettings.Done;
 begin
-  if Handle = INVALID_HANDLE_VALUE then
+  if not IsOpen then
     Exit;
 
   FarAPI.SettingsControl(Handle, SCTL_FREE, 0, nil);
+
   Handle := INVALID_HANDLE_VALUE;
+  CurrentRoot := 0;
 end;
 
 function TFarSettings.CreateKey;
 var
   value: FarSettingsValue;
 begin
+  if not IsOpen then
+    Exit(0);
+
   value.Init;
   value.Root := CurrentRoot;
   value.Value := Pointer(Name);
+
   Result := FarAPI.SettingsControl(Handle, SCTL_CREATESUBKEY, 0, Pointer(@value));
-  CurrentRoot := Result;
+
+  if Result <> 0 then
+    CurrentRoot := Result;
 end;
 
 function TFarSettings.OpenKey;
 var
   value: FarSettingsValue;
 begin
+  if not IsOpen then
+    Exit(0);
+
   value.Init;
   value.Root := CurrentRoot;
   value.Value := Pointer(Name);
+
   Result := FarAPI.SettingsControl(Handle, SCTL_OPENSUBKEY, 0, Pointer(@value));
-  CurrentRoot := Result;
+
+  if Result <> 0 then
+    CurrentRoot := Result;
 end;
 
 function TFarSettings.GetValue(const Name, DefaultValue: string): PChar;
 var
   item: FarSettingsItem;
 begin
+  if not IsOpen then
+    Exit(Pointer(DefaultValue));
+
   item.Init;
   item.Root := CurrentRoot;
   item.Name := Pointer(Name);
   item.&Type := FST_STRING;
+
   if FarAPI.SettingsControl(Handle, SCTL_GET, 0, Pointer(@item)) <> 0 then
     Result := item.Value.&String
   else
@@ -92,10 +120,14 @@ function TFarSettings.GetValue(const Name: string; const DefaultValue: UInt64): 
 var
   item: FarSettingsItem;
 begin
+  if not IsOpen then
+    Exit(DefaultValue);
+
   item.Init;
   item.Root := CurrentRoot;
   item.Name := Pointer(Name);
   item.&Type := FST_QWORD;
+
   if FarAPI.SettingsControl(Handle, SCTL_GET, 0, Pointer(@item)) <> 0 then
     Result := item.Value.Number
   else
@@ -106,11 +138,15 @@ function TFarSettings.SetValue(const Name, Value: string): Boolean;
 var
   item: FarSettingsItem;
 begin
+  if not IsOpen then
+    Exit(False);
+
   item.Init;
   item.Root := CurrentRoot;
   item.Name := Pointer(Name);
   item.&Type := FST_STRING;
   item.Value.&String := Pointer(Value);
+
   Result := FarAPI.SettingsControl(Handle, SCTL_SET, 0, Pointer(@item)) <> 0;
 end;
 
@@ -118,11 +154,15 @@ function TFarSettings.SetValue(const Name: string; const Value: UInt64): Boolean
 var
   item: FarSettingsItem;
 begin
+  if not IsOpen then
+    Exit(False);
+
   item.Init;
   item.Root := CurrentRoot;
   item.Name := Pointer(Name);
   item.&Type := FST_QWORD;
   item.Value.Number := Value;
+  
   Result := FarAPI.SettingsControl(Handle, SCTL_SET, 0, Pointer(@item)) <> 0;
 end;
 

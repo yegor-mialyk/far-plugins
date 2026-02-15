@@ -23,4 +23,34 @@
       1: (UnderlineIndex: color_index);
       2: (UnderlineRGBA: rgba);
     end;
+    Reserved: DWORD;
+
+    class operator Equal(const Left, Right: FarColor): Boolean;
+    class operator NotEqual(const Left, Right: FarColor): Boolean;
+
+    function IsBgIndex: Boolean;
+    function IsFgIndex: Boolean;
+    function IsUnderlineIndex: Boolean;
+
+    function IsBgDefault: Boolean;
+    function IsFgDefault: Boolean;
+    function IsUnderlineDefault: Boolean;
+
+    function GetUnderline: Integer;
+
+    procedure SetBgIndex(const Value: Boolean);
+    procedure SetFgIndex(const Value: Boolean);
+    procedure SetUnderlineIndex(const Value: Boolean);
+
+    procedure SetBgDefault;
+    procedure SetFgDefault;
+    procedure SetUnderlineDefault;
+
+    procedure SetUnderline(const UnderlineStyle: Integer);
+
+    function IsBg4Bit: Boolean;
+    function IsFg4Bit: Boolean;
+
+    procedure SetBg4Bit(const Value: Boolean);
+    procedure SetFg4Bit(const Value: Boolean);
   end;
