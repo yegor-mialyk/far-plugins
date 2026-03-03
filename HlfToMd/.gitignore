@@ -1,0 +1,9 @@
+*.exe
+*.dll
+bin
+obj
+.vs
+node_modules
+*.DotSettings.user
+packages
+.DS_Store
